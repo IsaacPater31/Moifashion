@@ -1,0 +1,59 @@
+/* About Component Styles */
+/* Single Responsibility: Only About styles */
+
+.about {
+  padding: var(--spacing-4xl) var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 3rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-white);
+  margin: 0 0 var(--spacing-xl);
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 30px var(--color-white-30);
+}
+
+.about p {
+  font-size: 1.25rem;
+  color: var(--color-white-80);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  font-weight: var(--font-weight-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+  }
+  
+  .about p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: var(--spacing-xl) 0.75rem;
+  }
+  
+  .about h2 {
+    font-size: 1.75rem;
+  }
+  
+  .about p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+

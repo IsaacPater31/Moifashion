@@ -1,0 +1,28 @@
+/* Main Layout Styles */
+/* Single Responsibility: Only main layout styles */
+
+.shop-root {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-black);
+  overflow-x: hidden;
+  align-items: stretch;
+}
+
+main {
+  flex: 1;
+  padding: var(--spacing-xl);
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: var(--color-black);
+  color: var(--color-white);
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+

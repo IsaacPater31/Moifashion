@@ -1,0 +1,16 @@
+/* Main Styles Entry Point */
+/* Following Dependency Inversion: High-level modules don't depend on low-level modules */
+/* Following Open/Closed: Open for extension, closed for modification */
+
+/* Base Styles - Foundation */
+@import './base/index.css';
+
+/* Utilities - Reusable helpers */
+@import './utilities/index.css';
+
+/* Layouts - Page structure */
+@import './layouts/index.css';
+
+/* Components - Individual component styles */
+/* Each component imports its own styles following Single Responsibility */
+

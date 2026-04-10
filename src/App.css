@@ -1,0 +1,48 @@
+/* App.css - Main Styles Entry Point */
+/* Following SOLID, GRASP, and KISS principles */
+/* This file imports all base styles, utilities, and layouts */
+/* Component-specific styles are co-located with their components */
+
+/* Base Styles - Foundation (variables, reset, typography) */
+@import './styles/base/index.css';
+
+/* Utilities - Reusable helpers (buttons, animations) */
+@import './styles/utilities/index.css';
+
+/* Layouts - Page structure (main, root) */
+@import './styles/layouts/index.css';
+
+/* Global styles - Only styles that don't belong to specific components */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}

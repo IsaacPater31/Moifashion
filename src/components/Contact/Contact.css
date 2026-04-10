@@ -1,0 +1,110 @@
+/* Contact Component Styles */
+/* Single Responsibility: Only Contact styles */
+
+.contact {
+  padding: var(--spacing-4xl) var(--spacing-xl);
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-white);
+  margin: 0 0 var(--spacing-md);
+  letter-spacing: -0.02em;
+}
+
+.contact p {
+  font-size: 1.25rem;
+  color: var(--color-white-80);
+  margin-bottom: var(--spacing-4xl);
+  line-height: 1.6;
+}
+
+.contact-form {
+  display: grid;
+  gap: var(--spacing-md);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  font-size: 0.875rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-white);
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.875rem var(--spacing-md);
+  border-radius: 12px;
+  border: 1px solid var(--color-gold-20);
+  background: var(--color-white-05);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  transition: var(--transition-base);
+  font-family: var(--font-family-base);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px var(--color-gold-10);
+  background: var(--color-white-10);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .contact h2 {
+    font-size: 2rem;
+  }
+  
+  .contact p {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .contact-form {
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: var(--spacing-xl) 0.75rem;
+  }
+  
+  .contact h2 {
+    font-size: 1.75rem;
+  }
+  
+  .contact p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-form {
+    gap: var(--spacing-sm);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.75rem var(--spacing-sm);
+  }
+}
+

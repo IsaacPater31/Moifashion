@@ -1,0 +1,7 @@
+/* Base Styles Entry Point */
+/* Following Dependency Inversion: Base styles don't depend on components */
+
+@import './variables.css';
+@import './reset.css';
+@import './typography.css';
+

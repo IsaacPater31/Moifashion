@@ -1,0 +1,42 @@
+/* Animation Utilities */
+/* Single Responsibility: Only animations */
+
+@keyframes liquid-shimmer {
+  0%, 100% { 
+    transform: translateX(-100%); 
+  }
+  50% { 
+    transform: translateX(100%); 
+  }
+}
+
+@keyframes liquid-shimmer-diagonal {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  50% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+}
+
+@keyframes hero-shimmer {
+  0%, 100% { 
+    transform: translateX(-100%); 
+  }
+  50% { 
+    transform: translateX(100%); 
+  }
+}
+
+@keyframes footer-particles {
+  0% { 
+    transform: translateY(0); 
+  }
+  100% { 
+    transform: translateY(-50px); 
+  }
+}
+

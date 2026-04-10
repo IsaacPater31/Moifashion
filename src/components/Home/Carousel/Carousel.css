@@ -579,3 +579,88 @@
   }
 }
 
+/* ─── AI slide badge ─── */
+.carousel-ai-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 100px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.9rem;
+  backdrop-filter: blur(8px);
+}
+
+.carousel-ai-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.8);
+  animation: ai-dot-pulse 2s ease-in-out infinite;
+}
+
+@keyframes ai-dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+/* AI slide CTA button */
+.carousel-btn--ai {
+  background: linear-gradient(135deg, var(--color-gold) 0%, #b8962e 100%) !important;
+  border-color: transparent !important;
+  color: var(--color-black) !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 24px rgba(212, 175, 55, 0.45);
+}
+
+.carousel-btn--ai:hover {
+  box-shadow: 0 8px 32px rgba(212, 175, 55, 0.65) !important;
+  transform: translateY(-3px) scale(1.03) !important;
+}
+
+/* ─── Dot indicators ─── */
+.carousel-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  z-index: 15;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+}
+
+.carousel-dot.active {
+  background: var(--color-white);
+  width: 24px;
+  border-radius: 4px;
+}
+
+.carousel-dot--ai.active {
+  background: var(--color-gold);
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.7);
+}
+
+.carousel-dot:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.65);
+  transform: scale(1.2);
+}
+

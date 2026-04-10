@@ -2,13 +2,22 @@ import { useState, useEffect } from 'react'
 import './Carousel.css'
 
 /* ─── Carousel images — swap files in src/assets/images/carousel/ ─── */
-import slide1 from '../../../assets/images/carousel/slide-1.png'
-import slide2 from '../../../assets/images/carousel/slide-2.png'
-import slide3 from '../../../assets/images/carousel/slide-3.png'
-import slide4 from '../../../assets/images/carousel/slide-4.png'
+import slide1   from '../../../assets/images/carousel/slide-1.png'
+import slide2   from '../../../assets/images/carousel/slide-2.png'
+import slide3   from '../../../assets/images/carousel/slide-3.png'
+import slide4   from '../../../assets/images/carousel/slide-4.png'
+import slideIA  from '../../../assets/images/carousel/slide-ia.png'
 
-function Carousel({ onChange }) {
+function Carousel({ onChange, onScrollToAI }) {
   const [currentSlide, setCurrentSlide] = useState(0)
+
+  /* Smooth scroll to the AI section */
+  const scrollToAI = () => {
+    const section = document.getElementById('ai-outfit-finder')
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
   
   const slides = [
     {
@@ -28,6 +37,16 @@ function Carousel({ onChange }) {
       image: slide2,
       buttonText: 'VER COLECCIÓN',
       buttonAction: () => onChange('productos')
+    },
+    {
+      id: 'ia',
+      title: 'Buscador con IA',
+      subtitle: 'Encuentra tu outfit perfecto ✦',
+      description: 'Describe la ocasión, el estilo o el estado de ánimo que imaginas. Nuestra Inteligencia Artificial seleccionará las piezas exclusivas de nuestra colección que mejor se adaptan a ti.',
+      image: slideIA,
+      buttonText: 'Probar ahora',
+      buttonAction: scrollToAI,
+      isAI: true,
     },
     {
       id: 'blog',
@@ -56,17 +75,8 @@ function Carousel({ onChange }) {
     return () => clearInterval(timer)
   }, [slides.length])
 
-  const goToSlide = (index) => {
-    setCurrentSlide(index)
-  }
-
-  const goToNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
-
-  const goToPrev = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
+  const goToNext = () => setCurrentSlide((prev) => (prev + 1) % slides.length)
+  const goToPrev = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
 
   return (
     <section className="carousel-section">
@@ -85,11 +95,20 @@ function Carousel({ onChange }) {
             >
               <div className="carousel-overlay"></div>
               <div className="carousel-content">
-                <div className="carousel-text">
+                <div className={`carousel-text ${slide.isAI ? 'carousel-text--ai' : ''}`}>
+                  {slide.isAI && (
+                    <div className="carousel-ai-badge">
+                      <span className="carousel-ai-dot" />
+                      Inteligencia Artificial
+                    </div>
+                  )}
                   <h2 className="carousel-title">{slide.title}</h2>
                   <h3 className="carousel-subtitle">{slide.subtitle}</h3>
                   <p className="carousel-description">{slide.description}</p>
-                  <button className="btn primary carousel-btn" onClick={slide.buttonAction}>
+                  <button
+                    className={`btn primary carousel-btn ${slide.isAI ? 'carousel-btn--ai' : ''}`}
+                    onClick={slide.buttonAction}
+                  >
                     {slide.buttonText}
                   </button>
                 </div>
@@ -105,6 +124,18 @@ function Carousel({ onChange }) {
         <button className="carousel-arrow carousel-arrow-next" onClick={goToNext} aria-label="Siguiente slide">
           <span>›</span>
         </button>
+
+        {/* Dot indicators */}
+        <div className="carousel-dots">
+          {slides.map((slide, index) => (
+            <button
+              key={slide.id}
+              className={`carousel-dot ${index === currentSlide ? 'active' : ''} ${slide.isAI ? 'carousel-dot--ai' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+              aria-label={`Ir al slide ${index + 1}: ${slide.title}`}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )

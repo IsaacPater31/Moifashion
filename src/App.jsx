@@ -6,7 +6,8 @@ import {
   HeroLema, 
   Testimonials, 
   CTASection, 
-  Home 
+  Home,
+  AISection
 } from './components/Home'
 import { About } from './components/About'
 import { Products } from './components/Products'
@@ -25,6 +26,7 @@ function App() {
           <>
             <Carousel onChange={setSection} />
             <Home />
+            <AISection />
             <HeroLema />
             <Testimonials />
             <CTASection />

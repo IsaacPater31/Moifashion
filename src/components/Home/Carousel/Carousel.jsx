@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react'
 import './Carousel.css'
 
+/* ─── Carousel images — swap files in src/assets/images/carousel/ ─── */
+import slide1 from '../../../assets/images/carousel/slide-1.png'
+import slide2 from '../../../assets/images/carousel/slide-2.png'
+import slide3 from '../../../assets/images/carousel/slide-3.png'
+import slide4 from '../../../assets/images/carousel/slide-4.png'
+
 function Carousel({ onChange }) {
   const [currentSlide, setCurrentSlide] = useState(0)
   
@@ -10,7 +16,7 @@ function Carousel({ onChange }) {
       title: 'Nuestra Historia',
       subtitle: 'Selección Exclusiva',
       description: 'Nos especializamos en seleccionar los mejores diseños importados para crear presencia y elegancia. Cada pieza es cuidadosamente elegida para ofrecerte exclusividad y profesionalismo.',
-      image: 'https://picsum.photos/seed/about/800/600',
+      image: slide1,
       buttonText: 'Conoce Nuestra Historia',
       buttonAction: () => onChange('about')
     },
@@ -19,8 +25,8 @@ function Carousel({ onChange }) {
       title: 'Nuestra Colección',
       subtitle: 'Diseños Sofisticados',
       description: 'Explora nuestra colección de prendas importadas de diseño sofisticado. Seleccionamos meticulosamente cada pieza para entregarte exclusividad y crear tu propia presencia única.',
-      image: 'https://picsum.photos/seed/products/800/600',
-      buttonText: 'Ver Colección',
+      image: slide2,
+      buttonText: 'VER COLECCIÓN',
       buttonAction: () => onChange('productos')
     },
     {
@@ -28,7 +34,7 @@ function Carousel({ onChange }) {
       title: 'Blog MOI Fashion',
       subtitle: 'Estilo y Presencia',
       description: 'Descubre consejos de estilo, tendencias de diseño y cómo crear tu propia presencia a través de la moda. Mantente actualizado con contenido exclusivo sobre elegancia y profesionalismo.',
-      image: 'https://picsum.photos/seed/blog/800/600',
+      image: slide3,
       buttonText: 'Leer Blog',
       buttonAction: () => onChange('blog')
     },
@@ -37,7 +43,7 @@ function Carousel({ onChange }) {
       title: 'Contáctanos',
       subtitle: 'Estamos Aquí Para Ti',
       description: '¿Tienes preguntas sobre nuestra selección exclusiva o quieres hacer una consulta personalizada sobre estilo y presencia? Nuestro equipo está listo para ayudarte.',
-      image: 'https://picsum.photos/seed/contact/800/600',
+      image: slide4,
       buttonText: 'Hablemos',
       buttonAction: () => onChange('contact')
     }
@@ -91,13 +97,12 @@ function Carousel({ onChange }) {
             </div>
           ))}
         </div>
-        
-        
+
         {/* Navigation Arrows */}
-        <button className="carousel-arrow carousel-arrow-prev" onClick={goToPrev} aria-label="Previous slide">
+        <button className="carousel-arrow carousel-arrow-prev" onClick={goToPrev} aria-label="Slide anterior">
           <span>‹</span>
         </button>
-        <button className="carousel-arrow carousel-arrow-next" onClick={goToNext} aria-label="Next slide">
+        <button className="carousel-arrow carousel-arrow-next" onClick={goToNext} aria-label="Siguiente slide">
           <span>›</span>
         </button>
       </div>
@@ -106,4 +111,3 @@ function Carousel({ onChange }) {
 }
 
 export default Carousel
-

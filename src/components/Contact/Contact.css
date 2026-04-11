@@ -1,7 +1,7 @@
 /* =========================================================
    Contact Page — Premium Dark Styles
-   Paleta estricta: Negro (#000 / #0d0d0d / #1a1a1a) + Dorado (#b8860b) + Blanco
-   Coherente 100% con el resto del sitio MOI FASHION
+   Paleta estricta: Negro + Dorado + Blanco
+   Responsive: Desktop → Tablet → iPhone 13/11 → iPhone XR → iPhone SE → 360px
    ========================================================= */
 
 /* ── Shared ─────────────────────────────────────────────── */
@@ -28,7 +28,6 @@
   --my: 50%;
 }
 
-/* Grano sutil igual que el resto del sitio */
 .contact-hero__noise {
   position: absolute;
   inset: 0;
@@ -37,7 +36,6 @@
   pointer-events: none;
 }
 
-/* Spotlight dorado siguiendo al cursor */
 .contact-hero__spotlight {
   position: absolute;
   inset: 0;
@@ -50,7 +48,6 @@
   transition: background 0.08s linear;
 }
 
-/* Grid de líneas identical al CTA section */
 .contact-hero::before {
   content: '';
   position: absolute;
@@ -68,6 +65,7 @@
   text-align: center;
   padding: 0 var(--spacing-xl);
   max-width: 900px;
+  width: 100%;
   animation: contact-fade-up 0.9s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
@@ -82,7 +80,7 @@
 }
 
 .contact-hero__title {
-  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
   font-weight: var(--font-weight-black);
   line-height: 1.05;
   color: var(--color-white);
@@ -100,7 +98,7 @@
 }
 
 .contact-hero__subtitle {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--color-white-60);
   max-width: 480px;
   margin: 0 auto;
@@ -109,7 +107,7 @@
 }
 
 .contact-hero__scroll-hint {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   display: flex;
   justify-content: center;
 }
@@ -144,28 +142,27 @@
 }
 
 .contact-cards-section__title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: var(--font-weight-extrabold);
   color: var(--color-white);
   letter-spacing: -0.025em;
-  margin: 0 0 3.5rem;
+  margin: 0 0 3rem;
   font-family: var(--font-family-base);
 }
 
 .contact-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
-/* Card — mismo patrón que .info-card en Home */
 .contact-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 1rem;
-  padding: 2.5rem 2rem;
+  padding: 2.25rem 1.75rem;
   background: linear-gradient(135deg, var(--color-black-light), var(--color-black-lighter));
   border: 1px solid var(--color-gold-10);
   border-radius: var(--radius-lg);
@@ -184,7 +181,6 @@
   box-shadow: 0 8px 32px var(--color-gold-20);
 }
 
-/* Shimmer idéntico al hero */
 .contact-card__glow {
   position: absolute;
   inset: 0;
@@ -199,8 +195,8 @@
 }
 
 .contact-card__icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   color: var(--color-gold);
   transition: transform var(--transition-base);
   flex-shrink: 0;
@@ -218,7 +214,7 @@
 }
 
 .contact-card__label {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.2em;
   color: var(--color-gold);
@@ -226,23 +222,23 @@
 }
 
 .contact-card__value {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-white);
-  line-height: 1.2;
+  line-height: 1.3;
   font-family: var(--font-family-base);
 }
 
 .contact-card__desc {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--color-white-50);
   line-height: 1.5;
 }
 
 .contact-card__arrow {
   position: absolute;
-  bottom: 1.5rem;
-  right: 1.75rem;
+  bottom: 1.25rem;
+  right: 1.5rem;
   font-size: 1rem;
   color: var(--color-white-20);
   transition: transform var(--transition-base), color var(--transition-base);
@@ -253,9 +249,7 @@
   color: var(--color-gold);
 }
 
-/* ── WhatsApp Section ─────────────────────────────────────
-   Fondo oscuro del sitio, botón verde solo el botón en sí
-   ──────────────────────────────────────────────────────── */
+/* ── WhatsApp Section ─────────────────────────────────────*/
 .whatsapp-section {
   padding: 5rem var(--spacing-xl);
   background: var(--color-black-light);
@@ -265,7 +259,6 @@
   overflow: hidden;
 }
 
-/* Sutil brillo dorado de fondo */
 .whatsapp-section::before {
   content: '';
   position: absolute;
@@ -286,7 +279,6 @@
   z-index: 2;
 }
 
-/* Badge de estado — dorado en vez de verde */
 .whatsapp-section__badge {
   display: inline-flex;
   align-items: center;
@@ -295,7 +287,7 @@
   background: var(--color-gold-10);
   border: 1px solid var(--color-gold-30);
   border-radius: 100px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-gold-light);
   letter-spacing: 0.08em;
@@ -316,7 +308,7 @@
 }
 
 .whatsapp-section__text h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.5rem);
   font-weight: var(--font-weight-extrabold);
   letter-spacing: -0.025em;
   margin: 0 0 0.5rem;
@@ -329,34 +321,34 @@
   font-size: 1rem;
 }
 
-/* Botón WhatsApp — verde solo en el botón, fondo de sección es negro */
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
-  padding: 1.1rem 2.5rem;
+  padding: 1rem 2.25rem;
   background: #25D366;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: var(--font-weight-bold);
   border-radius: var(--radius-lg);
   text-decoration: none;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.25), var(--shadow-md);
+  box-shadow: 0 4px 20px rgba(37,211,102,0.25), var(--shadow-md);
   transition: var(--transition-base);
   font-family: var(--font-family-base);
 }
 
 .whatsapp-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(37, 211, 102, 0.4), var(--shadow-lg);
+  box-shadow: 0 8px 32px rgba(37,211,102,0.4), var(--shadow-lg);
   filter: brightness(1.07);
 }
 
 .whatsapp-btn__icon {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.1rem;
+  height: 1.1rem;
   flex-shrink: 0;
 }
 
@@ -377,7 +369,7 @@
 }
 
 .contact-form-section__header h2 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: var(--font-weight-extrabold);
   letter-spacing: -0.025em;
   margin: 0 0 0.75rem;
@@ -390,7 +382,6 @@
   color: var(--color-white-60);
 }
 
-/* Opciones del formulario */
 .cform-options {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -400,14 +391,14 @@
 
 .cform-option {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 1.25rem;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 1rem 1.1rem;
   background: linear-gradient(135deg, var(--color-black-light), var(--color-black-lighter));
   border: 1px solid var(--color-gold-10);
   border-radius: var(--radius-md);
   color: var(--color-white-70);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   font-weight: var(--font-weight-medium);
   cursor: pointer;
   transition: all var(--transition-base);
@@ -430,22 +421,22 @@
 }
 
 .cform-option__icon {
-  font-size: 1.2rem;
-  line-height: 1;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  flex-shrink: 0;
 }
 
 .cform-option__label {
-  line-height: 1.3;
+  line-height: 1.4;
 }
 
-/* Formulario dinámico */
 .cform {
   animation: contact-fade-up 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
 .cform__fields {
   display: grid;
-  gap: 1.25rem;
+  gap: 1.1rem;
   margin-bottom: 1.75rem;
 }
 
@@ -456,7 +447,7 @@
 }
 
 .cform__label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.08em;
   color: var(--color-white-80);
@@ -464,7 +455,6 @@
   font-family: var(--font-family-base);
 }
 
-/* Inputs — idéntico a .contact-form input del original */
 .cform__input {
   padding: 0.875rem var(--spacing-md);
   background: var(--color-white-05);
@@ -474,6 +464,8 @@
   font-size: 0.875rem;
   font-family: var(--font-family-base);
   transition: var(--transition-base);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .cform__input::placeholder {
@@ -489,20 +481,21 @@
 
 .cform__textarea {
   resize: vertical;
-  min-height: 130px;
+  min-height: 120px;
 }
 
 .cform__error {
-  font-size: 0.85rem;
+  font-size: 0.83rem;
   color: #e05555;
   margin: 0 0 1rem;
   padding: 0.75rem 1rem;
   background: rgba(224, 85, 85, 0.08);
   border: 1px solid rgba(224, 85, 85, 0.2);
   border-radius: var(--radius-md);
+  line-height: 1.5;
 }
 
-/* Botón principal — mismo estilo que .cta-button.primary */
+/* Botón — idéntico al .cta-button.primary */
 .cform-btn {
   display: inline-flex;
   align-items: center;
@@ -541,12 +534,12 @@
 }
 
 .contact-form__success-icon {
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--color-gold), var(--color-gold-light));
   color: var(--color-black);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: var(--font-weight-black);
   display: flex;
   align-items: center;
@@ -556,7 +549,7 @@
 }
 
 .contact-form__success h3 {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
   color: var(--color-white);
   margin: 0 0 0.75rem;
   font-family: var(--font-family-base);
@@ -588,7 +581,7 @@
 }
 
 .schedule-section__header h2 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: var(--font-weight-extrabold);
   letter-spacing: -0.025em;
   margin: 0;
@@ -596,14 +589,13 @@
   font-family: var(--font-family-base);
 }
 
-/* Estado abierto/cerrado — solo dorado y blanco */
 .schedule-status {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
   border-radius: 100px;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -626,17 +618,16 @@
   height: 7px;
   border-radius: 50%;
   background: currentColor;
+  flex-shrink: 0;
 }
 
 .schedule-status--open .schedule-status__dot {
   animation: contact-dot-pulse 2s ease-in-out infinite;
 }
 
-/* Tabla de horarios */
 .schedule-grid {
   display: flex;
   flex-direction: column;
-  gap: 0;
   border: 1px solid var(--color-gold-15);
   border-radius: var(--radius-xl);
   overflow: hidden;
@@ -646,7 +637,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 1.75rem 2.5rem;
+  padding: 1.6rem 2.25rem;
   background: linear-gradient(135deg, var(--color-black-light), var(--color-black-lighter));
   transition: background var(--transition-base);
 }
@@ -675,7 +666,8 @@
   width: 1px;
   height: 1.5rem;
   background: var(--color-gold-20);
-  margin: 0 2rem;
+  margin: 0 1.75rem;
+  flex-shrink: 0;
 }
 
 .schedule-card__hours {
@@ -683,6 +675,7 @@
   color: var(--color-white-70);
   font-weight: var(--font-weight-medium);
   font-family: var(--font-family-base);
+  white-space: nowrap;
 }
 
 .schedule-card__note {
@@ -690,7 +683,6 @@
   margin-right: 0.25rem;
 }
 
-/* Barra dorada izquierda — igual que los cards de Home */
 .schedule-card__bar {
   position: absolute;
   left: 0;
@@ -707,11 +699,10 @@
   font-size: 0.875rem;
   color: var(--color-white-40);
   font-family: var(--font-family-base);
+  line-height: 1.5;
 }
 
-/* ── Identity Section ─────────────────────────────────────
-   Sin colores externos — fondo negro con gradiente dorado
-   ──────────────────────────────────────────────────────── */
+/* ── Identity Section ─────────────────────────────────────*/
 .identity-section {
   position: relative;
   min-height: 65vh;
@@ -722,7 +713,6 @@
   overflow: hidden;
 }
 
-/* Destellos dorados — mismo patrón que CTA section */
 .identity-section::before {
   content: '';
   position: absolute;
@@ -749,13 +739,14 @@
   text-align: center;
   padding: 5rem var(--spacing-xl);
   max-width: 900px;
+  width: 100%;
   animation: contact-fade-up 0.8s ease both;
 }
 
 .identity-section__wave {
-  font-size: 3rem;
+  font-size: 2.75rem;
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   animation: identity-float 3.5s ease-in-out infinite;
 }
 
@@ -765,12 +756,12 @@
 }
 
 .identity-section__title {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: var(--font-weight-black);
   letter-spacing: -0.035em;
   color: var(--color-white);
   line-height: 1.05;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.25rem;
   font-family: var(--font-family-base);
   text-shadow: 0 0 30px var(--color-white-30);
 }
@@ -783,11 +774,11 @@
 }
 
 .identity-section__desc {
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--color-white-60);
   line-height: 1.7;
-  max-width: 600px;
-  margin: 0 auto 3rem;
+  max-width: 580px;
+  margin: 0 auto 2.5rem;
   font-family: var(--font-family-base);
 }
 
@@ -796,105 +787,264 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
 
 .identity-pillar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .identity-pillar__icon {
-  font-size: 1.75rem;
+  font-size: 1.6rem;
 }
 
 .identity-pillar__label {
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: var(--font-weight-semibold);
   letter-spacing: 0.12em;
   color: var(--color-white-50);
   text-transform: uppercase;
   font-family: var(--font-family-base);
+  white-space: nowrap;
 }
 
-/* ── Responsive ───────────────────────────────────────────*/
-@media (max-width: 900px) {
+/* ==========================================================
+   RESPONSIVE — Tablet 1024px
+   ========================================================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .contact-hero { min-height: 80vh; }
+  .contact-hero__title { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+
+  .contact-cards-section,
+  .contact-form-section,
+  .schedule-section { padding: 5rem var(--spacing-xl); }
+  .whatsapp-section { padding: 4rem var(--spacing-xl); }
+
+  .contact-cards-grid { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .contact-card { padding: 2rem 1.5rem; }
+}
+
+/* ==========================================================
+   RESPONSIVE — Mobile 768px (iPhone landscape / small tablet)
+   ========================================================== */
+@media (max-width: 768px) {
+  .contact-hero {
+    min-height: 80vh;
+    padding: 0 var(--spacing-md);
+  }
+
+  .contact-hero__content { padding: 0 var(--spacing-md); }
+  .contact-hero__title { font-size: clamp(2.4rem, 9vw, 3.8rem); }
+  .contact-hero__subtitle { font-size: 1rem; }
+  .contact-hero__scroll-hint { margin-top: 2.5rem; }
+
+  .contact-cards-section,
+  .contact-form-section,
+  .schedule-section { padding: 4rem var(--spacing-md); }
+  .whatsapp-section { padding: 3.5rem var(--spacing-md); }
+
+  .contact-cards-section__inner,
+  .contact-form-section__inner,
+  .schedule-section__inner { padding: 0; }
+
   .contact-cards-grid {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
   }
 
-  .cform-options {
-    grid-template-columns: 1fr;
-  }
+  .cform-options { grid-template-columns: 1fr; }
+
+  .schedule-card { padding: 1.4rem 1.5rem; }
+  .schedule-card__divider { margin: 0 1.25rem; }
+
+  .identity-section { min-height: auto; }
+  .identity-section__content { padding: 4rem var(--spacing-md); }
+  .identity-section__desc br { display: none; }
+  .identity-section__pillars { gap: 2rem; }
+  .identity-section__title { font-size: clamp(2.2rem, 9vw, 3.5rem); }
 }
 
-@media (max-width: 768px) {
-  .contact-hero {
-    min-height: 80vh;
+/* ==========================================================
+   RESPONSIVE — 480px (iPhone SE landscape / small phones)
+   ========================================================== */
+@media (max-width: 480px) {
+  /* Hero */
+  .contact-hero { min-height: 75vh; }
+  .contact-hero__eyebrow { font-size: 0.62rem; letter-spacing: 0.2em; }
+  .contact-hero__title { font-size: clamp(2.1rem, 11vw, 2.8rem); line-height: 1.08; }
+  .contact-hero__subtitle { font-size: 0.9rem; max-width: 100%; }
+  .contact-hero__scroll-hint { display: none; }
+
+  /* Cards */
+  .contact-cards-section { padding: 3.5rem var(--spacing-md); }
+  .contact-cards-section__title { font-size: 1.6rem; margin-bottom: 2rem; }
+  .contact-card { padding: 1.75rem 1.5rem; gap: 0.8rem; }
+  .contact-card__value { font-size: 0.95rem; }
+  .contact-card__desc { font-size: 0.8rem; }
+  .contact-card__icon { width: 2rem; height: 2rem; }
+
+  /* WhatsApp */
+  .whatsapp-section { padding: 3rem var(--spacing-md); }
+  .whatsapp-section__text h2 { font-size: 1.4rem; }
+  .whatsapp-section__text p { font-size: 0.875rem; }
+  .whatsapp-btn {
+    width: 100%;
+    padding: 1rem var(--spacing-lg);
+    font-size: 0.875rem;
   }
 
-  .contact-hero__content {
-    padding: 0 var(--spacing-md);
+  /* Form */
+  .contact-form-section { padding: 3.5rem var(--spacing-md); }
+  .contact-form-section__header { margin-bottom: 2rem; }
+  .contact-form-section__header h2 { font-size: 1.6rem; }
+  .contact-form-section__header p { font-size: 0.875rem; }
+  .cform-options { gap: 0.6rem; margin-bottom: 2rem; }
+  .cform-option { padding: 0.875rem 1rem; font-size: 0.85rem; }
+  .cform-option__icon { font-size: 1rem; }
+  .cform__fields { gap: 1rem; margin-bottom: 1.5rem; }
+  .cform__input { padding: 0.875rem 0.9rem; font-size: 0.875rem; }
+  .cform-btn { width: 100%; padding: 1rem; font-size: 0.875rem; }
+  .contact-form__success { padding: 2.5rem 1rem; }
+
+  /* Schedule */
+  .schedule-section { padding: 3.5rem var(--spacing-md); }
+  .schedule-section__header { margin-bottom: 2rem; }
+  .schedule-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+    padding: 1.1rem 1.25rem 1.1rem 1.75rem;
   }
+  .schedule-card__divider { display: none; }
+  .schedule-card__days { font-size: 0.9rem; }
+  .schedule-card__hours { font-size: 0.82rem; color: var(--color-white-60); }
+  .schedule-footer { font-size: 0.8rem; margin-top: 1.5rem; }
+
+  /* Identity */
+  .identity-section__content { padding: 3.5rem var(--spacing-md); }
+  .identity-section__wave { font-size: 2.25rem; margin-bottom: 1rem; }
+  .identity-section__title { font-size: clamp(2rem, 11vw, 2.8rem); line-height: 1.1; }
+  .identity-section__desc { font-size: 0.9rem; margin-bottom: 2rem; }
+  .identity-section__pillars { gap: 1.5rem; }
+  .identity-pillar__icon { font-size: 1.4rem; }
+  .identity-pillar__label { font-size: 0.62rem; }
+}
+
+/* ==========================================================
+   RESPONSIVE — 414px (iPhone XR / 11 Pro Max portrait)
+   ========================================================== */
+@media (max-width: 414px) {
+  .contact-hero__title { font-size: clamp(2rem, 12vw, 2.6rem); }
+  .contact-hero__eyebrow { letter-spacing: 0.18em; }
 
   .contact-cards-section,
   .whatsapp-section,
   .contact-form-section,
-  .schedule-section {
-    padding: 4.5rem var(--spacing-md);
-  }
+  .schedule-section { padding-left: 1rem; padding-right: 1rem; }
 
-  .schedule-card {
-    padding: 1.5rem 1.25rem;
-  }
+  .contact-card { padding: 1.5rem 1.25rem; border-radius: var(--radius-md); }
+  .contact-card__icon { width: 1.85rem; height: 1.85rem; }
 
-  .schedule-card__divider {
-    margin: 0 1.25rem;
-  }
+  .cform-option { padding: 0.8rem 0.9rem; }
+  .cform__input { padding: 0.8rem; }
 
-  .identity-section__pillars {
-    gap: 1.75rem;
-  }
-
-  .identity-section__desc br {
-    display: none;
-  }
+  .identity-section__content { padding: 3rem 1rem; }
+  .identity-section__pillars { gap: 1.25rem; }
 }
 
-@media (max-width: 480px) {
-  .contact-hero__title {
-    font-size: clamp(2.5rem, 12vw, 3.5rem);
-  }
+/* ==========================================================
+   RESPONSIVE — 390px (iPhone 13 / 12 Pro portrait)
+   ========================================================== */
+@media (max-width: 390px) {
+  .contact-hero__title { font-size: clamp(1.85rem, 12vw, 2.4rem); }
 
-  .whatsapp-btn {
-    width: 100%;
-    justify-content: center;
-  }
+  .contact-cards-section,
+  .whatsapp-section,
+  .contact-form-section,
+  .schedule-section { padding-left: 0.9rem; padding-right: 0.9rem; }
 
-  .identity-section__pillars {
-    flex-direction: column;
-    gap: 1.25rem;
-  }
+  .contact-card { padding: 1.4rem 1.1rem; }
+  .contact-card__value { font-size: 0.9rem; }
 
-  .schedule-card {
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    padding: 1.25rem;
-  }
+  .cform-option { font-size: 0.82rem; padding: 0.75rem 0.85rem; }
+  .cform-option__icon { font-size: 0.9rem; }
 
-  .schedule-card__divider {
-    display: none;
-  }
+  .whatsapp-section__text h2 { font-size: 1.3rem; }
 
-  .schedule-card__days {
-    width: 100%;
-    font-size: 0.9rem;
-  }
+  .schedule-card { padding: 1rem 1.1rem 1rem 1.5rem; }
+  .schedule-card__days { font-size: 0.875rem; }
+  .schedule-card__hours { font-size: 0.8rem; }
 
-  .schedule-card__hours {
-    font-size: 0.875rem;
-  }
+  .identity-section__title { font-size: clamp(1.75rem, 12vw, 2.4rem); }
+  .identity-section__desc { font-size: 0.875rem; }
+}
+
+/* ==========================================================
+   RESPONSIVE — 375px (iPhone SE 2nd/3rd gen portrait)
+   ========================================================== */
+@media (max-width: 375px) {
+  .contact-hero { min-height: 70vh; }
+  .contact-hero__title { font-size: clamp(1.75rem, 12.5vw, 2.25rem); }
+  .contact-hero__subtitle { font-size: 0.85rem; }
+
+  .contact-cards-section,
+  .whatsapp-section,
+  .contact-form-section,
+  .schedule-section { padding-left: 0.85rem; padding-right: 0.85rem; }
+
+  .contact-card { padding: 1.25rem 1rem; gap: 0.7rem; }
+  .contact-card__icon { width: 1.7rem; height: 1.7rem; }
+  .contact-card__label { font-size: 0.62rem; }
+  .contact-card__value { font-size: 0.875rem; }
+  .contact-card__desc { font-size: 0.78rem; }
+
+  .whatsapp-section__text h2 { font-size: 1.25rem; }
+  .whatsapp-btn { font-size: 0.825rem; padding: 0.9rem 1rem; }
+
+  .contact-form-section__header h2 { font-size: 1.45rem; }
+  .cform-option { padding: 0.7rem 0.8rem; font-size: 0.8rem; gap: 0.55rem; }
+  .cform__input { padding: 0.75rem 0.8rem; font-size: 0.825rem; }
+  .cform-btn { font-size: 0.825rem; }
+  .contact-form__success { padding: 2rem 0.5rem; }
+  .contact-form__success h3 { font-size: 1.4rem; }
+
+  .schedule-section__header h2 { font-size: 1.5rem; }
+  .schedule-card { padding: 0.9rem 1rem 0.9rem 1.4rem; }
+  .schedule-card__days { font-size: 0.82rem; }
+  .schedule-card__hours { font-size: 0.78rem; }
+
+  .identity-section__content { padding: 3rem 0.85rem; }
+  .identity-section__wave { font-size: 2rem; }
+  .identity-section__title { font-size: clamp(1.65rem, 13vw, 2.2rem); }
+  .identity-section__desc { font-size: 0.85rem; }
+  .identity-section__pillars { gap: 1rem; }
+  .identity-pillar__icon { font-size: 1.3rem; }
+  .identity-pillar__label { font-size: 0.6rem; }
+}
+
+/* ==========================================================
+   RESPONSIVE — 360px (Android pequeño / iPhone SE 1st gen)
+   ========================================================== */
+@media (max-width: 360px) {
+  .contact-hero__title { font-size: clamp(1.6rem, 12vw, 2rem); }
+  .contact-hero__eyebrow { font-size: 0.58rem; letter-spacing: 0.15em; }
+
+  .contact-cards-section,
+  .whatsapp-section,
+  .contact-form-section,
+  .schedule-section { padding-left: 0.75rem; padding-right: 0.75rem; }
+
+  .cform-option { padding: 0.65rem 0.75rem; font-size: 0.78rem; }
+  .cform__input { padding: 0.7rem 0.75rem; font-size: 0.8rem; }
+  .cform-btn { font-size: 0.8rem; }
+
+  .schedule-card__days { font-size: 0.8rem; }
+  .schedule-card__hours { font-size: 0.75rem; }
+
+  .identity-section__title { font-size: clamp(1.5rem, 12vw, 2rem); }
+  .identity-section__desc { font-size: 0.82rem; }
 }

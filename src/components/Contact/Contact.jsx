@@ -1,30 +1,33 @@
 import './Contact.css'
+import ContactHero from './ContactHero'
+import ContactCards from './ContactCards'
+import ContactForm from './ContactForm'
+import WhatsAppSection from './WhatsAppSection'
+import ScheduleSection from './ScheduleSection'
+import IdentitySection from './IdentitySection'
 
 function Contact() {
   return (
-    <section className="contact">
-      <h2>Contáctanos</h2>
-      <p>¿Tienes preguntas? Déjanos un mensaje.</p>
-      <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
-        <label>
-          Nombre
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Correo
-          <input type="email" name="email" />
-        </label>
-        <label>
-          Mensaje
-          <textarea name="message" rows="4" />
-        </label>
-        <div>
-          <button className="btn primary" type="submit">Enviar</button>
-        </div>
-      </form>
-    </section>
+    <div className="contact-page">
+      {/* 1. Hero */}
+      <ContactHero />
+
+      {/* 2. Contact Cards: Instagram, WhatsApp, Ubicación */}
+      <ContactCards />
+
+      {/* 3. WhatsApp CTA destacada */}
+      <WhatsAppSection />
+
+      {/* 4. Smart Form */}
+      <ContactForm />
+
+      {/* 5. Schedule */}
+      <ScheduleSection />
+
+      {/* 6. Identity / Cartagena */}
+      <IdentitySection />
+    </div>
   )
 }
 
 export default Contact
-

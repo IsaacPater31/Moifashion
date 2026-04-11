@@ -1,8 +1,3 @@
-# =============================================
-# MOI FASHION — .gitignore
-# =============================================
-
-# ─── Dependencies ────────────────────────────
 node_modules/
 .pnp
 .pnp.js
@@ -13,7 +8,6 @@ dist-ssr/
 build/
 
 # ─── Environment & secrets ───────────────────
-# ⚠️  NUNCA subir variables de entorno con API keys
 .env
 .env.local
 .env.development.local
@@ -68,21 +62,3 @@ coverage/
 .eslintcache
 .stylelintcache
 
-# ─── Assets — LEER NOTA ABAJO ────────────────
-#
-# Los assets SÍ se incluyen en el repo.
-# Para imágenes grandes (>500 KB) se recomienda Git LFS:
-#
-#   git lfs install
-#   git lfs track "src/assets/images/**/*.png"
-#   git lfs track "src/assets/images/**/*.jpg"
-#   git lfs track "src/assets/images/**/*.webp"
-#   git add .gitattributes
-#
-# Si en algún momento decides usar un CDN (Cloudinary, S3, etc.)
-# y NO quieres subir las imágenes al repo, descomenta las líneas:
-#
-# src/assets/images/products/
-# src/assets/images/carousel/
-#
-# El logo y los íconos SVG (<100 KB) siempre deben ir en el repo.

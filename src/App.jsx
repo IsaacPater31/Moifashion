@@ -32,7 +32,7 @@ function App() {
             <CTASection />
           </>
         )}
-        {section === 'about' && <About />}
+        {section === 'about' && <About onChange={setSection} />}
         {section === 'productos' && <Products />}
         {section === 'blog' && <Blog />}
         {section === 'contact' && <Contact />}
